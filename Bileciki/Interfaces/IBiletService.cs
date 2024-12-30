@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Bileciki.Interfaces
+﻿public interface IBiletService
 {
-    internal interface IBiletService
-    {
-    }
+    void AddBilet(Bilet bilet);
+    Bilet GetBilet(int id);
+    void UpdateBilet(Bilet bilet);
+    void DeleteBilet(int id);
 }

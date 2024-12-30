@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Bileciki.Interfaces
+﻿public interface IKlientService
 {
-    internal interface IKlientService
-    {
-    }
+    void AddKlient(Klient klient);
+    Klient GetKlient(int id);
+    void UpdateKlient(Klient klient);
+    void DeleteKlient(int id);
 }

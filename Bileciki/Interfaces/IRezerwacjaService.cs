@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Bileciki.Interfaces
+public interface IRezerwacjaService
 {
-    internal interface IRezerwacjaService
-    {
-    }
+    void AddRezerwacja(Rezerwacja rezerwacja);
+    Rezerwacja GetRezerwacja(int id);
+    void UpdateRezerwacja(Rezerwacja rezerwacja);
+    void DeleteRezerwacja(int id);
 }
