@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
-namespace Bileciki
+public class Database
 {
-    internal class Database
-    {
-    }
+    public List<Bilet> Bilety = new List<Bilet>();
+    public List<Klient> Klienci = new List<Klient>();
+    public List<Rezerwacja> Rezerwacje = new List<Rezerwacja>();
 }

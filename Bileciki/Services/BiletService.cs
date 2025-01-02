@@ -1,12 +1,41 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Bileciki;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Bileciki.Services
+public class BiletService : IBiletService
 {
-    internal class BiletService
+    private Database db;
+
+    public BiletService(Database database)
     {
+        db = database;
+    }
+
+    public void AddBilet(Bilet bilet)
+    {
+        db.Bilety.Add(bilet);
+    }
+
+    public Bilet GetBilet(int id)
+    {
+        return db.Bilety.FirstOrDefault(b => b.Id == id);
+    }
+
+    public void UpdateBilet(Bilet bilet)
+    {
+        var item = GetBilet(bilet.Id);
+        if (item != null)
+        {
+            item.Typ = bilet.Typ;
+            item.Cena = bilet.Cena;
+        }
+    }
+
+    public void DeleteBilet(int id)
+    {
+        var item = GetBilet(id);
+        if (item != null)
+        {
+            db.Bilety.Remove(item);
+        }
     }
 }
