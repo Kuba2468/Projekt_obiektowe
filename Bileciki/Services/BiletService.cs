@@ -1,5 +1,4 @@
-﻿using Bileciki;
-using System.Linq;
+﻿using System.Linq;
 
 public class BiletService : IBiletService
 {
