@@ -56,8 +56,5 @@
     <Compile Include="Services\KlientService.cs" />
     <Compile Include="Services\RezerwacjaService.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="README.md" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
